@@ -34,6 +34,7 @@ export default function SignupPage() {
           placeholder='Enter email id'
           onChange={(e)=> setEmail(e.target.value) }
           value={email}
+          readOnly
         />
         <input
           type='password'

@@ -11,7 +11,7 @@ import { useAuthContext } from './hooks/useAuthContext';
 
 function App() {
   const {uuser} = useAuthContext()
-  const {user} = useAuthContext()
+  // const {user} = useAuthContext()
   return ( 
     <div className="App">
       <BrowserRouter>
@@ -27,11 +27,11 @@ function App() {
             />
             <Route
               path='/login2'
-              element={<Login2Page/>}
+              element={ <Login2Page/> }
             />
             <Route
               path='/signup'
-              element={<SignupPage/>}
+              element={ <SignupPage/> }
             />
             <Route
               path='/demo'
@@ -39,7 +39,7 @@ function App() {
             />
             <Route
               path='/tryforfree'
-              element={<TryforfreePage/>}
+              element={uuser ? <TryforfreePage/> : <Navigate to="/login" /> }
             />
             <Route
               path='/splashpage'

@@ -11,6 +11,8 @@ const router = express.Router()
 
 
 router.post('/login',loginUuser)
+router.get('/login',loginUuser)
+
 
 // login2 route
 

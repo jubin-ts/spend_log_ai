@@ -12,6 +12,7 @@ const router = express.Router()
 
 router.post('/login',loginUser)
 
+
 // login2 route
 
 // router.patch('/login',login2User)
@@ -20,6 +21,7 @@ router.post('/login',loginUser)
 
 
 router.post('/signup',signupUser)
+router.get('/signup',signupUser)
 
 
 // signup2 routes 

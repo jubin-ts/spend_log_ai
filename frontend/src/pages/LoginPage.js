@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLoginup } from '../hooks/useLogin';
 import Header from '../common/Header';
@@ -17,7 +17,7 @@ export default function LoginPage() {
      const uuser =  logup(email)
     localStorage.setItem('email', email)
       console.log(uuser)
-    if (msg.message === 'Please create a password.') {
+    if (msg && msg.message === 'Please create a password.') {
       navigate('/signup');
     } 
     if (uuser && msg.message === 'Please enter your password.') {
